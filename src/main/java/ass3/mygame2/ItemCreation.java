@@ -22,16 +22,23 @@ public class ItemCreation
     
     public void createItems(){
         
-        Item item1, item2, excaliburSword, key, frontGateKey;
+        Item  excaliburSword, key, frontGateKey, BedroomKey, RemoteControl;
         
         
         excaliburSword = new Item("excaliburSword", "The legendary Excalibur", 100);
         key = new Item("key", "It has a shape of a heart", 100);
         frontGateKey = new Item("frontGateKey", "To open the front gate door", 100);
+        BedroomKey = new Item("BedroomKey", "To enter the bedroom",100);
+        RemoteControl = new Item("RemoteControl", "To turn on the theatre",100);
+        
         
         allItemsInGame.add(excaliburSword);
         allItemsInGame.add(key);
         allItemsInGame.add(frontGateKey);
+        allItemsInGame.add(BedroomKey);
+        allItemsInGame.add(RemoteControl);
+        
+        
     }
    
     public Item getItem(String stringItem){
