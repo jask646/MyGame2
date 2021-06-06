@@ -1,8 +1,20 @@
-
+/**This class is part of the "World of Zuul" application. 
+ * "World of Zuul" is a very simple, text based adventure game. 
+ * 
+ * This class holds the information about the different rooms.
+ * All the rooms are given exits such as north, South , east and west in the class RoomCreation
+ * There are different items required to enter different rooms.
+ * An item will be required to enter in the respected room
+ */
 package ass3.mygame2;
-
+/**
+ * @author Jaskarn Pal Kaur and Pawandeep Kaur
+ * @version 06/06/2021
+ * 
+ */
 
 import java.util.ArrayList;
+
 
 public class RoomCreation {
 
@@ -14,7 +26,13 @@ public class RoomCreation {
         itemCreation = new ItemCreation();
         createRooms();
     }
-    
+  /**
+   * Rooms are initialized in the class
+   * Rooms are added in the class
+   * The rooms are given the exits
+   * Items are added in the room
+   * 
+   */  
     private void createRooms() {
 
         Room castle, kitchen, frontGate, Bedroom, Theatre;
@@ -50,8 +68,9 @@ public class RoomCreation {
 
   /**
    * 
-   * @param stringRoom Contains the room name
-   * @return the room name
+   * 
+   * @param stringRoom This contains the room name
+   * @return this returns the room name
    * 
    */
     public Room getRoom(String stringRoom) {

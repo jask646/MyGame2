@@ -1,3 +1,6 @@
+/**
+ * 
+ */
 package ass3.mygame2;
 
 import java.util.ArrayList;
@@ -6,12 +9,12 @@ import java.util.ArrayList;
 /**
  * Write a description of class ItemCreation here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (Jaskaran Pal Kaur and Pawandeep Kaur)
+ * @version (6/06/2021)
  */
 public class ItemCreation
 {
-    
+   
     private ArrayList<Item> allItemsInGame;
     
     public ItemCreation()
@@ -19,7 +22,7 @@ public class ItemCreation
         allItemsInGame = new ArrayList();
         createItems();
     }
-    
+   
     public void createItems(){
         
         Item  excaliburSword, key, frontGateKey, BedroomKey, RemoteControl;

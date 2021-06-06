@@ -1,7 +1,18 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * This class is part of the "World of Zuul" application. 
+ * "World of Zuul" is a very simple, text based adventure game.  
+ * 
+ *  To play this game, create an instance of this class and call the "play"
+ *  method.
+ * 
+ * This main class hold the information of playing game and initialises all the others:
+ * it provides information of the item available to the user and provides relevant information 
+ * to enter into other room. It also evaluates and
+ * executes the commands that the parser returns.
+ * This classs game holds the information of playing game. There will be a continuous loop of items
+ * available to enter into different rooms.
+ * Whole information regarding help,go quit various other commands will be given in this class.
+
  */
 package ass3.mygame2;
 
@@ -31,6 +42,7 @@ public class Game {
     /**
      * Create the game and initialise its internal map.
      */
+    
     public Game() {
         long timeStart = System.currentTimeMillis(); // use the real time
         timeCounter = 50;
@@ -66,7 +78,10 @@ public class Game {
 
     /**
      * Print out the opening message for the player.
+  
+     
      */
+    
     private void printWelcome() {
         System.out.println();
         System.out.println("some background here");
@@ -137,6 +152,7 @@ public class Game {
     /**
      * Try to in to one direction. If there is an exit, enter the new room,
      * otherwise print an error message.
+     * @param Command is to be processes
      */
     private void goRoom(Command command) {
         if (!command.hasSecondWord()) {
