@@ -83,10 +83,13 @@ public class Game {
      */
     
     private void printWelcome() {
-        System.out.println();
-        System.out.println("some background here");
-        System.out.println("objective here");
-        System.out.println("include some necessary information (e.g. time limit)");
+        System.out.println("Welcome to the world of Text Based Adventure Game and have a fun. Let the adventure begin");
+        System.out.println("The Word of zuul is a text Based Adventure Game. There are four exits in this scenery north,south,east and west"
+                + "An item is required to grab in order to enter into the other room.\n You will be given commands to proceed"
+                + "with the game.\n You can invent, and remove the items in the game." );
+        System.out.println("This game is designed to play with the text words where the items will help to enter and \n enter a new room.");
+        System.out.println("You need a particular item to enter into the other room and need to specify the direction."
+                + "if u are not specifying the proper direction and item, in result the game will over.");
         System.out.println();
         System.out.println(currentRoom.getLongDescription());
     }
