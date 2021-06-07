@@ -4,7 +4,8 @@ package ass3.mygame2;
 
 /**
  *
- * @author @version
+ * @author Jaskaran Pal Kaur and Pawandeep Kaur
+ * @version 07/06/2021
  */
 
 

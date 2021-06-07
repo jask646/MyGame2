@@ -21,7 +21,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
- *
+ *@author Jaskaran Pal Kaur and Pawandeep Kaur
+ * @version 07/06/2021
  *
  
  */
@@ -50,8 +51,7 @@ public class Game {
         player = new Player();
         rooms = new RoomCreation();
         currentRoom = rooms.getRoom("castle");  // start game outside
-        //System.out.println(createRoom.getcurrentRoom().getName());
-    }
+            }
     
     public Room getCurrentRoom() {
         return currentRoom;
@@ -64,13 +64,10 @@ public class Game {
     public void play() {
         printWelcome();
 
-        // Enter the main command loop.  Here we repeatedly read commands and
-        // execute them until the game is over.
         boolean finished = false;
         while (!finished) {
             long currentTime = System.currentTimeMillis();
-            Command command = parser.getCommand();
-            // count the delta (currentTome - startTime)            
+            Command command = parser.getCommand();         
             finished = processCommand(command);
         }
         System.out.println("Thank you for playing.  Good bye.");
@@ -112,7 +109,7 @@ public class Game {
         if (commandWord.equals("help")) {
             printHelp();
         } else if (commandWord.equals("inventory")) {
-            printInventory(); // printVeggies
+            printInventory(); 
         } else if (commandWord.equals("go")) {
             goRoom(command);
         } else if (commandWord.equals("take")) {
@@ -120,13 +117,13 @@ public class Game {
         } else if (commandWord.equals("drop")) {
             dropItem(command);
         } else if (commandWord.equals("use")) {
-            //useItem(command);
+            
         } else if (commandWord.equals("inspect")) {
-            //lookItem(command);
+            
         } else if (commandWord.equals("quit")) {
             wantToQuit = quit(command);
         }
-        // else command not recognised.
+       
         return wantToQuit;
     }
 
@@ -138,7 +135,7 @@ public class Game {
     private void printHelp() {
         System.out.println("");
 
-        // implement random Hints -> massive bonus points 
+       
         System.out.println("you can open the door using the use command");
 
         System.out.println("you need to clear the ogre before you can open the kitchen door");
@@ -159,83 +156,75 @@ public class Game {
      */
     private void goRoom(Command command) {
         if (!command.hasSecondWord()) {
-            // if there is no second word, we don't know where to go...
+       
             System.out.println("Go where?");
             return;
         }
 
         String direction = command.getSecondWord();
 
-        // Try to leave current room.
+       
         Room nextRoom = currentRoom.getExit(direction);
 
         if (nextRoom == null) {
             System.out.println("There is no door!");
         } else {
-            if (currentRoom.getLockedStatus() == true) { // the door is locked
+            if (currentRoom.getLockedStatus() == true)
+            { 
                 System.out.println("The door is locked, you need to find a way to open it");
                 System.out.println(currentRoom.getLongDescription());
             } else {
                 currentRoom = nextRoom;
                 System.out.println(currentRoom.getLongDescription());
-                //System.out.println(currentRoom.printAllRoomItems());
-                // increment the timeCounter
+            
             }
         }
     }
 
     private void takeItem(Command command) {
-        if (!command.hasSecondWord()) {
-            // if there is no second word, we don't know where to go...
-            System.out.println("Take what?");
+        if (!command.hasSecondWord())
+        {
+          System.out.println("Take what?");
             return;
         }
 
         String itemFromCommand = command.getSecondWord();
         Item currentItem = currentRoom.getRoomItem(itemFromCommand);
-        //getPlayerItem(itemFromCommand);
-
+        
         if (currentItem == null) {
             System.out.println("You can't take nothing, no?");
         } else {
-            // Do the transaction here
+          
             currentRoom.removeItemInRoom(currentItem);
             player.addItemInventory(currentItem);
 
-            //roomItem.remove(currentItem);
-            //addItemInventory(currentItem);
-            //System.out.println(currentRoom.getLongDescription());
-        }
+           }
     }
 
     private void dropItem(Command command) {
         if (!command.hasSecondWord()) {
-            // if there is no second word, we don't know where to go...
             System.out.println("Take what?");
             return;
         }
 
         String itemFromCommand = command.getSecondWord();
         Item currentItem = player.getPlayerItem(itemFromCommand);
-        //getPlayerItem(itemFromCommand);
+      
 
         if (currentItem == null) {
             System.out.println("You can't take nothing, no?");
         } else {
-            // Do the transaction here
+      
             player.removeItemInventory(currentItem);
             currentRoom.addItemInRoom(currentItem);
 
-            //removeItemInventory(currentItem);
-            //roomItem.put(currentItem, currentRoom);
-            //System.out.println(currentRoom.getLongDescription());
         }
     }
 
-    private void useItem(Command command) // use key
+    private void useItem(Command command)
     {
         if (!command.hasSecondWord()) {
-            // if there is no second word, we don't know where to go...
+      
             System.out.println("Take what?");
             return;
         }
@@ -246,19 +235,10 @@ public class Game {
         if (currentItem == null) {
             System.out.println("You can't use nothing, no?");
         } else {
-            // you want make sure that the currentRoom is the room where you want to open the door (before the nextdoor).
-            // you want to make sure the currentItem matches the key to open the next door.
-
-            //if(currentRoom.getName().equals("castle") && currentItem.getName().equals("key")){
-            //.setLockedStatus(false);
+            
             System.out.println("You just used the " + currentItem.getName());
 
-            //if(currentRoom.getName().equals("frontYard") && currentItem.getName().equals("item1")){
-            //frontGate.setLockedStatus(false);
-            // if(currentRoom.getName().equals("castle")){
-            // //currentRoom.checkRoom("castle");
-            // roomKey.get(currentItem).setLockedStatus(false);
-            // }
+            
             System.out.println("You cannot use this item here");
 
         }
@@ -276,7 +256,7 @@ public class Game {
             System.out.println("Quit what?");
             return false;
         } else {
-            return true;  // signal that we want to quit
+            return true;  
         }
     }
 

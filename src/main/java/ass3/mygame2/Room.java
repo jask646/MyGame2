@@ -16,7 +16,6 @@ import java.util.HashMap;
 import java.util.ArrayList;
 
 /**
- * Write at least 3 sentences!!!!!
  * 
  * @author  Jaskaran Pal Kaur and Pawandeep Kaur
  * @version 06/06/2021
@@ -27,7 +26,7 @@ public class Room
     private String description;
     private String name;
     private boolean isLocked;
-    private HashMap<String, Room> exits;        // stores exits of this room.
+    private HashMap<String, Room> exits;        
     private ArrayList<Item> roomItem;
     private HashMap<Room, Item> roomHashMapItem;
 
