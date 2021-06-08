@@ -5,8 +5,7 @@ import java.util.ArrayList;
 
 
 /**
- * Write a description of class Player here.
- *
+ * The class Player enumerates the information how the player can add inventory and remove the item from the inventory. *
  * @author (Jaskaran Pal Kaur and Pawandeep Kaur)
  * @version (06/06/2021)
  */

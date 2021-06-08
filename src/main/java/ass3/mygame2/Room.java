@@ -1,13 +1,5 @@
 /**
- * Class Room - a room in an adventure game.
  *
- * This class is part of the "World of Zuul" application. 
- * "World of Zuul" is a very simple, text based adventure game.  
- *
- * A "Room" represents one location in the scenery of the game.  It is 
- * connected to other rooms via exits.  The exits are labeled north, 
- * east, south, west.  For each direction, the room stores an item to enter into the neighboring room
- * or null if there is no exit in that direction.
  */
 package ass3.mygame2;
 
@@ -16,6 +8,15 @@ import java.util.HashMap;
 import java.util.ArrayList;
 
 /**
+ *  Class Room - a room in an adventure game.
+ *
+ * This class is part of the "World of Zuul" application. 
+ * "World of Zuul" is a very simple, text based adventure game.  
+ *
+ * A "Room" represents one location in the scenery of the game.  It is 
+ * connected to other rooms via exits.  The exits are labeled north, 
+ * east, south, west.  For each direction, the room stores an item to enter into the neighboring room
+ * or null if there is no exit in that direction.
  * 
  * @author  Jaskaran Pal Kaur and Pawandeep Kaur
  * @version 06/06/2021

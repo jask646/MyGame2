@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
+ *The main class holds the information of playing game and initializes all the others.
  *@author Jaskaran Pal Kaur and Pawandeep Kaur
  * @version 07/06/2021
  *

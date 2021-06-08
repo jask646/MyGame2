@@ -4,7 +4,7 @@
 */
 package ass3.mygame2;
 /**
- * 
+ * This class item holds the information of item
  *
  * @author (Jaskaran Pal kaur and Pawandeep Kaur)
  * @version (06/06/2021)
@@ -31,7 +31,7 @@ public class Item
     /**
      * Constructor 2
      * @param name
-     * @param description
+     * @param description 
      * @param healingPower 
      */
     public Item(String name, String description, double healingPower)

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 
 /**
- * Write a description of class ItemCreation here.
+ * ItemCreation class enumerates the information of creating items and getting items.
  *
  * @author (Jaskaran Pal Kaur and Pawandeep Kaur)
  * @version (6/06/2021)

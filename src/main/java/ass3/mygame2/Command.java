@@ -1,3 +1,7 @@
+
+
+package ass3.mygame2;
+
 /**
  * This class is part of the "World of Zuul" application. 
  * "World of Zuul" is a very simple, text based adventure game.  
@@ -16,8 +20,6 @@
  * @author  Jaskaran Pal Kaur and Pawandeep Kaur
  * @version 2016.06.06
  */
-
-package ass3.mygame2;
 
 public class Command
 {
